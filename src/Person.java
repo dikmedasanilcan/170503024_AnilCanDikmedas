@@ -6,7 +6,7 @@ public class Person {
 
     protected String firstName;
     protected String lastName;
-    protected int phoneNumber;
+    protected double phoneNumber;
     protected int id;
 
     public String getFirstName() {
