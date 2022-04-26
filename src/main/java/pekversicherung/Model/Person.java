@@ -1,3 +1,5 @@
+package pekversicherung.Model;
+
 import java.io.*;
 import java.lang.*;
 import java.util.*;
@@ -8,6 +10,13 @@ public class Person {
     protected String lastName;
     protected int phoneNumber;
     protected int id;
+
+    public Person(String firstName, String lastName, int phoneNumber, int id) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;

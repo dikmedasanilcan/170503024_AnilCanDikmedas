@@ -1,3 +1,5 @@
+package pekversicherung.Model;
+
 import java.io.*;
 import java.lang.*;
 import java.util.*;
@@ -9,6 +11,10 @@ public class Customer extends Person{
     private String address;
     private String userAccount;
     private String password;
+
+    public Customer(String firstName, String lastName, int phoneNumber, int id) {
+        super(firstName, lastName, phoneNumber, id);
+    }
 
     public int getCustomerId() {
         return customerId;

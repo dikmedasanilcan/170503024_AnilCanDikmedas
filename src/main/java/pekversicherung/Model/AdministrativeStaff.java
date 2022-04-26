@@ -1,3 +1,5 @@
+package pekversicherung.Model;
+
 import java.io.*;
 import java.lang.*;
 import java.util.*;
@@ -7,6 +9,10 @@ public class AdministrativeStaff extends Person{
     private int administrativeStaffId;
     private String position;
     private int socialSecurityNumber;
+
+    public AdministrativeStaff(String firstName, String lastName, int phoneNumber, int id) {
+        super(firstName, lastName, phoneNumber, id);
+    }
 
     public int getAdministrativeStaffId() {
         return administrativeStaffId;
