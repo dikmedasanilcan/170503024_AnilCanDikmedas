@@ -13,4 +13,5 @@ module pek.versicherung {
     opens pekversicherung.Controller to javafx.fxml;
 
     requires java.sql;
+    requires mysql.connector.java;
 }

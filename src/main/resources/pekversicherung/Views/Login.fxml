@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="960.0" styleClass="gradient-background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="960.0" styleClass="gradient-background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pekversicherung.Controller.Login">
    <center>
       <VBox alignment="CENTER" maxHeight="300.0" maxWidth="400.0" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -29,7 +29,7 @@
                   <Insets left="150.0" right="150.0" />
                </VBox.margin>
             </Pane>
-            <Label text="Bitte melden Sie an." textFill="#dbdbdb">
+            <Label text="Bitte melden Sie sich an." textFill="#dbdbdb">
                <font>
                   <Font size="20.0" />
                </font>
@@ -46,7 +46,7 @@
                      <HBox.margin>
                         <Insets />
                      </HBox.margin></ImageView>
-                  <TextField alignment="CENTER" prefHeight="27.0" prefWidth="179.0" promptText="Benutzername" styleClass="textfield">
+                  <TextField fx:id="field_id" alignment="CENTER" prefHeight="27.0" prefWidth="179.0" promptText="Benutzername" styleClass="textfield">
                      <HBox.margin>
                         <Insets right="30.0" />
                      </HBox.margin>
@@ -63,21 +63,26 @@
                         <Image url="@../img/password.png" />
                      </image>
                   </ImageView>
-                  <TextField alignment="CENTER" prefHeight="27.0" prefWidth="179.0" promptText="Passwort" styleClass="textfield">
+                  <PasswordField fx:id="field_password" alignment="CENTER" onAction="#handeLoginClick" prefHeight="27.0" prefWidth="179.0" promptText="Passwort" styleClass="textfield">
                      <HBox.margin>
-                        <Insets right="30.0" />
+                        <Insets right="28.0" />
                      </HBox.margin>
-                  </TextField>
+                  </PasswordField>
                </children>
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </HBox>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="28.0" prefWidth="90.0" styleClass="login-button" text="Anmelden">
+            <Button fx:id="btnAnmelden" alignment="CENTER" mnemonicParsing="false" onAction="#handeLoginClick" prefHeight="28.0" prefWidth="90.0" styleClass="login-button" text="Anmelden">
                <VBox.margin>
-                  <Insets left="10.0" top="10.0" />
+                  <Insets left="10.0" top="5.0" />
                </VBox.margin>
             </Button>
+            <Label style="-fx-text-fill: red;" text="Ihr Benutzername oder Passwort ist ungültig!" visible="false">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </Label>
          </children>
       </VBox>
    </center>
