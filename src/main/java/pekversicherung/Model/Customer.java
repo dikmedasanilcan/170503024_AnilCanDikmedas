@@ -1,4 +1,4 @@
-package pekversicherung.Model;
+package pekversicherung.model;
 
 import java.io.*;
 import java.lang.*;

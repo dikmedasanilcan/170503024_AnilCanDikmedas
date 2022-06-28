@@ -1,10 +1,10 @@
-package pekversicherung.Model;
+package pekversicherung.model;
 
 import java.util.Date;
 
 public class Account{
     private boolean isLoggedIn = false;
-    private AdministrativeStaff admin;
+    private AdministrativeStaff person;
 
     private String username;
     private String password;
@@ -12,20 +12,22 @@ public class Account{
     public Account() {
     }
 
-    public void anMelden(String username, String password){
+    public void login(String username, String password){
         isLoggedIn = true;
         this.username = username;
         this.password = password;
     }
 
-    public void abMelden(){
+    public void logout(){
         isLoggedIn = false;
     }
 
-    public void setAdmin(AdministrativeStaff admin) {
-        this.admin = admin;
+    public void setPerson(AdministrativeStaff person) {
+        this.person = person;
     }
 
-    public AdministrativeStaff getAdmin(){ return admin; }
+    public AdministrativeStaff getPerson(){
+        return person;
+    }
 
 }

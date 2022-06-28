@@ -4,8 +4,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import pekversicherung.Controller.Login;
-import pekversicherung.Model.Account;
+import pekversicherung.controller.Login;
+import pekversicherung.model.Account;
 
 import java.io.IOException;
 import java.sql.*;
@@ -29,12 +29,10 @@ public class Main extends Application {
 
         account = new Account();
 
-        testDB();
-
         launch();
     }
 
-    public Account getAccount(){
+    public static Account getAccount(){
         return account;
     }
 
@@ -58,23 +56,4 @@ public class Main extends Application {
         globalStage.setScene(scene);
     }
 
-    public static void testDB(){
-        String insertSql = "INSERT INTO customer (id, firstName, lastName, phoneNumber, address) VALUES "
-                + "('1', 'Anıl Can', 'Dikmedaş', '05111111111', 'A Mah. B Sk. No:1 D:1');";
-
-        ResultSet resultSet = null;
-        try(PreparedStatement statement = connection.prepareStatement(insertSql, Statement.RETURN_GENERATED_KEYS))
-        {
-            statement.execute();
-            resultSet = statement.getGeneratedKeys();
-
-            while(resultSet.next()){
-                System.out.println("Generated: " + resultSet.getString(1));
-            }
-        }
-        catch(SQLException e){
-            e.printStackTrace();
-            e.getCause();
-        }
-    }
 }

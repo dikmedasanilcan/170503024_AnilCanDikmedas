@@ -1,4 +1,4 @@
-package pekversicherung.Controller;
+package pekversicherung.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import pekversicherung.DatabaseLogin;
 import pekversicherung.Main;
@@ -31,10 +32,15 @@ public class Login {
         if (DatabaseLogin.checkLogin(username, password)){
             Main main = new Main();
             main.loadDashboard();
-            main.getAccount().anMelden(username, password);
+            Main.getAccount().login(username, password);
         }
         else{
-            System.out.println("Falsche ID oder Passwort!");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Fehler");
+            alert.setHeaderText("Falsche ID oder Passwort!");
+            alert.setContentText("Bitte versuche es erneut.");
+            alert.showAndWait();
+
         }
 
     }

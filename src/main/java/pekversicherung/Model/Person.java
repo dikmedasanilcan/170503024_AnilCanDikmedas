@@ -1,10 +1,13 @@
-package pekversicherung.Model;
+package pekversicherung.model;
 
 import java.io.*;
 import java.lang.*;
 import java.util.*;
 
 public class Person {
+    
+    public Person(){}
+
     public int id;
     public String firstName = "";
     public String lastName = "";

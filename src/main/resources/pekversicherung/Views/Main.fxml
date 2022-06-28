@@ -11,19 +11,14 @@
    <children>
       <MenuBar>
          <menus>
-            <Menu mnemonicParsing="false" text="File">
+            <Menu mnemonicParsing="false" text="Datei">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Schiließen" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
+            <Menu mnemonicParsing="false" text="Bearbeiten">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="Löschen" />
                </items>
             </Menu>
          </menus>
@@ -41,7 +36,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="41.0" prefWidth="600.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="272.0" text="Was möchten Sie tun?" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="272.0" text="was würden Sie machen wollen?" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font size="15.0" />
                      </font>

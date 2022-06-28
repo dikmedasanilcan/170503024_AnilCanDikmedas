@@ -8,9 +8,10 @@ module pek.versicherung {
     requires org.kordamp.bootstrapfx.core;
 
     opens pekversicherung to javafx.fxml;
+    opens pekversicherung.model to javafx.base;
     exports pekversicherung;
-    exports pekversicherung.Controller;
-    opens pekversicherung.Controller to javafx.fxml;
+    exports pekversicherung.controller;
+    opens pekversicherung.controller to javafx.fxml;
 
     requires java.sql;
     requires mysql.connector.java;
